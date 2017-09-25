@@ -1,0 +1,19 @@
+sudo: required
+language: bash
+services:
+  - docker
+
+notifications:
+  email:
+    on_success: never
+    recipients:
+      - lslezak@suse.cz
+
+before_install:
+  - docker build -t systemd-change-guard-image .
+  # list the installed packages (just for easier debugging)
+  - docker run --rm -it systemd-change-guard-image rpm -qa | sort
+
+script:
+  - docker run --rm -it systemd-change-guard-image ./systemd_status_check.rb
+

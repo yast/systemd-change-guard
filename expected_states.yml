@@ -1,0 +1,25 @@
+---
+unit active states:
+- activating
+- active
+- deactivating
+- failed
+- inactive
+- reloading
+service unit substates:
+- auto-restart
+- dead
+- exited
+- failed
+- final-sigkill
+- final-sigterm
+- reload
+- running
+- start
+- start-post
+- start-pre
+- stop
+- stop-post
+- stop-sigabrt
+- stop-sigkill
+- stop-sigterm
