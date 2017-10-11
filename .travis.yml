@@ -8,6 +8,7 @@ notifications:
     on_success: never
     recipients:
       - lslezak@suse.cz
+      - mvidner@suse.cz
 
 before_install:
   - docker build -t systemd-change-guard-image .
